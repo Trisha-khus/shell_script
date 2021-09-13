@@ -1,0 +1,4 @@
+#!/bin/bash
+
+awk '{print $1}' log_file.txt | sort | uniq -c | sort -rn > log_file1.txt
+awk 'NR==1, NR==8 {print $2,$1}' log_file1.txt
